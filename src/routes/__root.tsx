@@ -89,6 +89,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Dr. Atul Shankar Mani Tripathi — VIT-AP University" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Dr. Atul Shankar Mani Tripathi | Associate Professor | VIT-AP University" },
+      { name: "twitter:title", content: "Dr. Atul Shankar Mani Tripathi | Associate Professor | VIT-AP University" },
+      { property: "og:description", content: "Official academic and research profile of Dr. Atul Shankar Mani Tripathi, Associate Professor at the School of Electronics Engineering, VIT-AP University." },
+      { name: "twitter:description", content: "Official academic and research profile of Dr. Atul Shankar Mani Tripathi, Associate Professor at the School of Electronics Engineering, VIT-AP University." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86c54ca0452734f936c07ad001a745dc/id-preview-65688e31--26024540-8427-4880-916f-8b5cc6ab393e.lovable.app-1786197469491.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86c54ca0452734f936c07ad001a745dc/id-preview-65688e31--26024540-8427-4880-916f-8b5cc6ab393e.lovable.app-1786197469491.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
