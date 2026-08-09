@@ -62,45 +62,66 @@
 }
 
 :root {
-  --radius: 0.25rem;
-  --background: oklch(0.985 0.004 85);
-  --foreground: oklch(0.24 0.02 260);
-  --card: oklch(0.995 0.002 85);
-  --card-foreground: oklch(0.24 0.02 260);
-  --popover: oklch(0.995 0.002 85);
-  --popover-foreground: oklch(0.24 0.02 260);
-  --primary: oklch(0.28 0.062 258);
-  --primary-foreground: oklch(0.985 0.004 85);
-  --secondary: oklch(0.945 0.006 85);
-  --secondary-foreground: oklch(0.3 0.02 260);
-  --muted: oklch(0.955 0.005 85);
-  --muted-foreground: oklch(0.48 0.015 258);
-  --accent: oklch(0.52 0.062 215);
-  --accent-foreground: oklch(0.985 0.004 85);
-  --destructive: oklch(0.52 0.19 27);
-  --destructive-foreground: oklch(0.985 0.004 85);
-  --border: oklch(0.9 0.008 260);
-  --input: oklch(0.9 0.008 260);
-  --ring: oklch(0.52 0.062 215);
-  --chart-1: oklch(0.28 0.062 258);
-  --chart-2: oklch(0.52 0.062 215);
-  --chart-3: oklch(0.48 0.015 258);
-  --chart-4: oklch(0.7 0.04 240);
-  --chart-5: oklch(0.85 0.02 240);
-  --sidebar: oklch(0.985 0.004 85);
-  --sidebar-foreground: oklch(0.24 0.02 260);
-  --sidebar-primary: oklch(0.28 0.062 258);
-  --sidebar-primary-foreground: oklch(0.985 0.004 85);
-  --sidebar-accent: oklch(0.955 0.005 85);
-  --sidebar-accent-foreground: oklch(0.28 0.062 258);
-  --sidebar-border: oklch(0.9 0.008 260);
-  --sidebar-ring: oklch(0.52 0.062 215);
+  --radius: 0.125rem;
+
+  /* Academic palette: Espresso / Beige / Sage / Ivory */
+  --espresso: oklch(0.3031 0.0277 40.3);
+  --espresso-deep: oklch(0.2535 0.0224 42);
+  --beige: oklch(0.8389 0.0311 69);
+  --beige-light: oklch(0.9312 0.0171 76.1);
+  --sage: oklch(0.5318 0.0347 123.8);
+  --sage-light: oklch(0.6088 0.0381 123.6);
+  --ivory: oklch(0.9656 0.0091 78.3);
+
+  --background: var(--ivory);
+  --foreground: oklch(0.3231 0.0254 44);
+  --card: oklch(0.985 0.006 80);
+  --card-foreground: var(--espresso);
+  --popover: oklch(0.985 0.006 80);
+  --popover-foreground: var(--espresso);
+  --primary: var(--espresso);
+  --primary-foreground: var(--ivory);
+  --secondary: var(--beige-light);
+  --secondary-foreground: var(--espresso);
+  --muted: var(--beige-light);
+  --muted-foreground: oklch(0.5204 0.0277 55);
+  --accent: var(--sage);
+  --accent-foreground: var(--ivory);
+  --destructive: oklch(0.48 0.14 30);
+  --destructive-foreground: var(--ivory);
+  --border: oklch(0.8752 0.0208 72);
+  --input: oklch(0.8752 0.0208 72);
+  --ring: var(--sage);
+  --chart-1: var(--espresso);
+  --chart-2: var(--sage);
+  --chart-3: var(--beige);
+  --chart-4: oklch(0.6088 0.0381 123.6);
+  --chart-5: oklch(0.5904 0.0277 61.3);
+  --sidebar: var(--ivory);
+  --sidebar-foreground: var(--espresso);
+  --sidebar-primary: var(--espresso);
+  --sidebar-primary-foreground: var(--ivory);
+  --sidebar-accent: var(--beige-light);
+  --sidebar-accent-foreground: var(--espresso);
+  --sidebar-border: oklch(0.8752 0.0208 72);
+  --sidebar-ring: var(--sage);
 
   --font-serif-display: "Source Serif 4", Georgia, serif;
   --font-sans-ui: "IBM Plex Sans", system-ui, sans-serif;
-  --shadow-portrait: 0 24px 48px -28px oklch(0.28 0.062 258 / 0.45);
-  --shadow-soft: 0 1px 2px oklch(0.28 0.062 258 / 0.06), 0 8px 24px -20px oklch(0.28 0.062 258 / 0.4);
+  --shadow-portrait: 0 18px 40px -30px oklch(0.2535 0.0224 42 / 0.55);
+  --shadow-soft: 0 1px 2px oklch(0.2535 0.0224 42 / 0.05), 0 10px 30px -26px oklch(0.2535 0.0224 42 / 0.45);
 }
+
+@theme inline {
+  --color-espresso: var(--espresso);
+  --color-espresso-deep: var(--espresso-deep);
+  --color-beige: var(--beige);
+  --color-beige-light: var(--beige-light);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-ivory: var(--ivory);
+}
+
 
 @theme inline {
   --font-serif: var(--font-serif-display);
@@ -179,3 +200,27 @@
   }
 }
 
+
+@utility section-index {
+  font-family: var(--font-sans-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+@utility link-underline {
+  background-image: linear-gradient(var(--sage), var(--sage));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.35s ease;
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+@utility hairline {
+  border-top: 1px solid var(--border);
+}

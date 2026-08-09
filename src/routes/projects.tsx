@@ -26,6 +26,7 @@ function Projects() {
   return (
     <>
       <PageHeader
+        index="06"
         eyebrow="Funded & Institutional"
         title="Research Projects"
         intro="Only verified project records are listed."

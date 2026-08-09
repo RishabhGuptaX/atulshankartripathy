@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { PageHeader, Section, EmptyNote } from "@/components/Section";
-import { PublicationCard } from "@/components/PublicationCard";
+import { PublicationEntry } from "@/components/PublicationCard";
 import { PublicationFilters, type Filters } from "@/components/PublicationFilters";
 import { publications } from "@/data/publications";
 
@@ -49,6 +49,7 @@ function Publications() {
   return (
     <>
       <PageHeader
+        index="04"
         eyebrow="Scholarly Record"
         title="Publications"
         intro="Journal articles, conference papers, book chapters and reviews. Only verified records are listed."
@@ -75,7 +76,7 @@ function Publications() {
             </p>
             <div className="mt-2">
               {results.map((p) => (
-                <PublicationCard key={p.title} pub={p} />
+                <PublicationEntry key={p.title} pub={p} />
               ))}
             </div>
           </>

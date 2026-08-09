@@ -27,6 +27,7 @@ function Achievements() {
   return (
     <>
       <PageHeader
+        index="07"
         eyebrow="Recognition"
         title="Awards & Honours"
         intro="Only verified awards, honours and memberships are listed."
@@ -62,7 +63,7 @@ function Achievements() {
         ) : (
           <ul className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
             {memberships.map((m) => (
-              <li key={m.organization} className="bg-secondary/40 p-6">
+              <li key={m.organization} className="bg-background p-6">
                 <h3 className="font-serif text-lg font-semibold">{m.organization}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{m.detail}</p>
               </li>

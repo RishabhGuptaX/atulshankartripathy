@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import { Section, EmptyNote } from "@/components/Section";
-import { ResearchCard } from "@/components/ResearchCard";
-import { PublicationCard } from "@/components/PublicationCard";
+import { ResearchAreasList } from "@/components/ResearchAreasList";
+import { PublicationEntry } from "@/components/PublicationCard";
 import { NewsCard } from "@/components/NewsCard";
 import { researchAreas } from "@/data/research";
 import { publications } from "@/data/publications";
@@ -62,24 +62,21 @@ function Home() {
       <Hero />
 
       <Section
+        index="01"
         eyebrow="Research"
         title="Areas of Research"
         intro="Research interests focused on emerging electronic materials, semiconductor devices, device modelling and low-power electronics."
       >
-        <div className="grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
-          {researchAreas.map((a) => (
-            <ResearchCard key={a.title} area={a} />
-          ))}
-        </div>
+        <ResearchAreasList areas={researchAreas} />
         <Link
           to="/research"
-          className="mt-10 inline-block border-b border-accent pb-0.5 text-sm font-medium text-primary"
+          className="mt-10 inline-block border-b border-sage pb-0.5 text-sm font-medium text-primary transition-colors hover:text-sage"
         >
           View full research overview
         </Link>
       </Section>
 
-      <Section eyebrow="Publications" title="Selected Publications" muted>
+      <Section index="02" eyebrow="Publications" title="Selected Publications" tone="beige">
         {selected.length === 0 ? (
           <EmptyNote>
             Verified publications are being compiled and will be listed here shortly.
@@ -87,19 +84,19 @@ function Home() {
         ) : (
           <div>
             {selected.map((p) => (
-              <PublicationCard key={p.title} pub={p} />
+              <PublicationEntry key={p.title} pub={p} />
             ))}
           </div>
         )}
         <Link
           to="/publications"
-          className="mt-10 inline-block border-b border-accent pb-0.5 text-sm font-medium text-primary"
+          className="mt-10 inline-block border-b border-sage pb-0.5 text-sm font-medium text-primary transition-colors hover:text-sage"
         >
           View All Publications
         </Link>
       </Section>
 
-      <Section eyebrow="News" title="Latest Updates">
+      <Section index="03" eyebrow="News" title="Latest Updates">
         {news.length === 0 ? (
           <EmptyNote>Academic updates will be posted here.</EmptyNote>
         ) : (
