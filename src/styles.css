@@ -200,3 +200,27 @@
   }
 }
 
+
+@utility section-index {
+  font-family: var(--font-sans-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+@utility link-underline {
+  background-image: linear-gradient(var(--sage), var(--sage));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.35s ease;
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+@utility hairline {
+  border-top: 1px solid var(--border);
+}
