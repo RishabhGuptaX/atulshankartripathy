@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { professor } from "@/data/professor";
-import portrait from "@/assets/professor.avif.asset.json";
 
 const strip = [
   { label: "Field", value: "Organic & flexible electronics" },
@@ -58,7 +57,7 @@ export function Hero() {
           <figure className="mx-auto max-w-[19rem] lg:ml-auto lg:mr-0 lg:max-w-none">
             <div className="border border-beige bg-beige-light p-3">
               <img
-                src={portrait.url}
+                src="/images/professor.jpg"
                 alt={`Official portrait of ${professor.name}, ${professor.position}, ${professor.school}, ${professor.university}`}
                 width={640}
                 height={800}
