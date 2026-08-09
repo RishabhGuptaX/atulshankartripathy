@@ -15,14 +15,14 @@ export const professor = {
     "Alongside classroom teaching, he engages in laboratory-based instruction, project supervision and mentoring of research students. Further details of professional activities, editorial and reviewing service are to be updated.",
   ],
   profiles: {
-    googleScholar: "",
-    orcid: "",
-    scopus: "",
-    researcherId: "",
-    researchGate: "",
-    linkedin: "",
-    irins: "",
-  } as Record<ProfileKey, string>,
+  googleScholar: "https://scholar.google.com/citations?user=8lC2gSAAAAAJ",
+  orcid: "https://orcid.org/0000-0003-2586-0421",
+  scopus: "https://www.scopus.com/authid/detail.uri?authorId=57196718716",
+  researcherId: "https://www.webofscience.com/wos/author/record/HTM-2273-2023",
+  researchGate: "https://www.researchgate.net/profile/Atul-Tripathi-4",
+  linkedin: "https://www.linkedin.com/in/dr-atul-s-m-tripathi-283aa652",
+  irins: "https://vitap.irins.org/profile/301670",
+} as Record<ProfileKey, string>,
 } as const;
 
 export type ProfileKey =
