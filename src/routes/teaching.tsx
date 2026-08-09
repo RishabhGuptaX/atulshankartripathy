@@ -26,6 +26,7 @@ function Teaching() {
   return (
     <>
       <PageHeader
+        index="05"
         eyebrow="Education"
         title="Teaching"
         intro="Classroom and laboratory instruction, project supervision and mentoring within the School of Electronics Engineering."

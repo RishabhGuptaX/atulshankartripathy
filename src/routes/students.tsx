@@ -39,6 +39,7 @@ function Students() {
   return (
     <>
       <PageHeader
+        index="08"
         eyebrow="Group"
         title="Research Group"
         intro="Doctoral scholars, research and project students working on emerging electronic devices."

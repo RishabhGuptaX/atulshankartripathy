@@ -37,7 +37,7 @@ const quickProfile = [
 function About() {
   return (
     <>
-      <PageHeader eyebrow="Profile" title={`About ${professor.name}`} />
+      <PageHeader index="02" eyebrow="Profile" title={`About ${professor.name}`} />
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1.4fr_0.6fr]">
@@ -97,7 +97,7 @@ function About() {
       >
         <ul className="grid gap-px bg-border md:grid-cols-3">
           {international.map((i) => (
-            <li key={i.country} className="bg-secondary/40 p-7">
+            <li key={i.country} className="bg-background p-7">
               <p className="eyebrow">{i.country}</p>
               <h3 className="mt-3 font-serif text-lg font-semibold">{i.nature}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{i.detail}</p>
